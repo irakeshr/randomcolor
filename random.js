@@ -2,7 +2,7 @@
 let colors= document.querySelector("h1");
 let box= document.querySelector(".box");
 let main= document.querySelector(".main");
-let but= document.querySelector("button");
+let but= document.querySelector(".button");
 
  
  function onclick1(){
@@ -17,5 +17,6 @@ box.style.background=hesh;
 but.style.background=hesh;
    
  };
-  onclick1();
-  
+   onclick1();
+//    button event
+  but.addEventListener("click",onclick1);
