@@ -18,7 +18,7 @@ height: 100vh;
 .box{
     flex-direction: column;
     height: 200px;
-    width: 200px;
+   min-width:200px;  
     background-color: rgb(156, 92, 92);
     display: flex;
     align-items: center;
@@ -48,5 +48,97 @@ h1{
      position: relative;
      top: 30px;
      border-radius: 10% 0;
+     cursor: pointer;
     
 }
+.loader{
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(205, 205, 205, 0.62);
+    z-index:100;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* display: none; */
+    
+
+}
+#load{
+    height: 15px;
+    width: 15px;
+    background-color: rgb(10, 32, 44);
+    border-radius: 50%;
+    margin: 20px;
+    position: relative;
+}
+@keyframes load_screen{
+      0%{
+
+      top: 0px;
+    
+    }
+    50%{
+        top:-60px;
+    }
+    100%{
+        top: 0px;
+    }
+}
+  
+.load1{    
+    animation: load_screen .7s  .1s ease-in-out infinite;
+}
+.load2{    
+    animation: load_screen .7s .2s ease-in-out infinite;
+}
+.load3{    
+    animation: load_screen .7s .3s ease-in-out infinite;
+}
+.page_switcher{
+    height:40px;
+    width: 110px;
+    background-color:RGB(187, 194, 204);
+    position: relative;
+    left: 450px;
+    user-select: none;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius:0% 70% 70% 0%;
+    transition: .5s ease-in-out;
+   box-shadow:  rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;;
+    animation: move 1s .1s ease-in-out infinite;
+     
+}
+a{
+    text-decoration: none;
+      color: black;
+}
+a:active{
+    color: black;
+     
+}
+.page_switcher:active ,.page_switcher:hover{
+    transform: scale(1.1);
+}
+
+
+/* bullet animation */
+@keyframes move{
+    0%{
+        left:450px;  
+    }
+    50%{
+        left: 520px;
+    }
+    100%
+    {
+        left: 450px;
+    }
+}
+ 
